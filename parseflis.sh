@@ -1,10 +1,21 @@
 #!/bin/bash
-# parse FLIS database
-rowstart=$1
-maxlines=$2
+# parseflis.sh
+#
+# author: Erich Oelschlegel
+#         oelschlegel@gmail.com
+#
+# description: parses DLA's FLIS data into separate text files
+#              for easy MySQL import
+#
+# usage: ./parseflis.sh filename starting_row num_lines
+#  e.g.: ./parseflis.sh efs/flisfoi.txt 50000000 9000000
+#
+filename=$1
+rowstart=$2
+maxlines=$3
 lines=0
 #rm segment*
-filename='efs/flisfoi.txt'
+#filename='efs/flisfoi.txt'
 
 IFS=''
 while read -r line

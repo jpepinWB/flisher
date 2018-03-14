@@ -29,10 +29,17 @@ The text file is full of lines that look like this:
 The first two digits indicate the recordtype, followed by the relevant data.  Record type "01" is important, as this line contains the unique identifier for that piece of equipment, which is NOT found in the other record types, though they "belong" to this row.
 
 The script reads line by line, parsing the individual record types (segments) into their own separate files and reinserting the identifier for each line.
+
 01	Item Identification Data (Segment A)
+
 02	MOE Rule Data (Segment B) *** NOT YET IMPLEMENTED ***
+
 03	Reference Number / CAGE Data (Segment C)
+
 04	Item Standardization Data (Segment E) *** NOT YET IMPLEMENTED ***
+
 09	Freight Data (Segment G) *** NOT YET IMPLEMENTED ***
+
 05	Management Data (Segment H) *** NOT YET IMPLEMENTED ***
+
 08	Packaging Data (Segment W) *** partial implementation, ignores free text starting at col 74 ***

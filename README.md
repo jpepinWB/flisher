@@ -6,11 +6,11 @@ One file, "flisfoi.zip" contains a flat text file containing various record type
 
 The text file is full of lines that look like this:
 
-015840016691759T208-A19159RADAR SET          X43C2017360N A0
+```015840016691759T208-A19159RADAR SET          X43C2017360N A0
 0201MM333HM17360D  BA
 03 32DZZ  0136517015B0000
 045PA2017360000
-05DMMPBA1EA037000000.0007 3143A012017335L     00
+05DMMPBA1EA037000000.0007 3143A012017335L     00```
 
 The first two digits indicate the recordtype, followed by the relevant data.  Record type "01" is important, as this line contains the unique identifier for that piece of equipment, which is NOT found in the other record types, though they "belong" to this row.
 

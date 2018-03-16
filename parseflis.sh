@@ -29,6 +29,7 @@ key="$1"
 case $key in
     -s|--start)
     x=$2  # x = starting row
+    lines=$x
     shift # past argument
     shift # past value
     ;;
@@ -50,10 +51,10 @@ filename=$1
 while IFS= read -r line
 do
 	lines=$((lines+1))
-	recordtype=$(cut -c 2 <<< "$line")
+	recordtype=${line:1:1}
 
 	# check for item idenfication data
-	if [ $recordtype -eq 1 ]
+	if [[ $recordtype -eq 1 ]]
 	then
 		haveid=1
 		NIIN=${line:6:9}

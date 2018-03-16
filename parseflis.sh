@@ -83,13 +83,13 @@ do
 	# check for packaging data
 	elif [[ $recordtype -eq 8 && $haveid -eq 1 ]]
 	then
-		if [ ${line:7:1} != " " ]
+		if [[ ${line:7:1} != " " ]]
 		then
 			upweight="${line:7:4}.${line:11:1}"
 		else
 			upweight=""
 		fi	
-                if [ ${line:12:1} != " " ]
+                if [[ ${line:12:1} != " " ]]
                 then
                         upsizel="${line:12:3}.${line:15:1}"
 			upsizew="${line:16:3}.${line:19:1}"
@@ -97,19 +97,19 @@ do
                 else
                         upsize1=upsizew=upsizeh=""
                 fi
-                if [ ${line:24:1} != " " ]
+                if [[ ${line:24:1} != " " ]]
                 then
                         upcube="${line:24:4}.${line:28:3}"
                 else
                         upcube=""
                 fi
-                if [ ${line:36:1} != " " ]
+                if [[ ${line:36:1} != " " ]]
                 then
                         unpkgweight="${line:36:4}.${line:40:1}"
                 else
                         unpkgweight=""
                 fi
-                if [ ${line:41:1} != " " ]
+                if [[ ${line:41:1} != " " ]]
                 then
                         unpkgsizel="${line:41:3}.${line:44:1}"
                         unpkgsizew="${line:45:3}.${line:48:1}"
